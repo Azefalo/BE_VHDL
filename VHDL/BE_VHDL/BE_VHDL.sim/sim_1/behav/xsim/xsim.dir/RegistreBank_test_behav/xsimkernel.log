@@ -1,0 +1,7 @@
+Running: xsim.dir/RegistreBank_test_behav/xsimk -simmode gui -wdb RegistreBank_test_behav.wdb -simrunnum 0 -socket 56711
+Design successfully loaded
+Design Loading Memory Usage: 23480 KB (Peak: 24144 KB)
+Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 109316 KB (Peak: 162748 KB)
+Simulation CPU Usage: 10 ms
