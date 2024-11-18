@@ -42,6 +42,11 @@ architecture Behavioral of Illustration1 is
                 OP_out  : out STD_LOGIC_VECTOR (3 downto 0));
     end component;
     
+    component LC_OP_RE is
+        Port (  OP : in STD_LOGIC_VECTOR (7 downto 0);
+                W : out STD_LOGIC);
+    end component;
+    
     component RegistreBank is
         Port (  ADDR_A  : in  STD_LOGIC_VECTOR(3 downto 0);
                 ADDR_B  : in  STD_LOGIC_VECTOR(3 downto 0);
@@ -56,8 +61,13 @@ architecture Behavioral of Illustration1 is
     
     signal IP_memInstru         : STD_LOGIC_VECTOR(7 downto 0);
     signal memInstru_LiDi       : STD_LOGIC_VECTOR(7 downto 0);
-    signal LiDi_RegistreBank    : STD_LOGIC_VECTOR(7 downto 0);
+    signal LiDi_A               : STD_LOGIC_VECTOR(7 downto 0);
+    signal LiDi_B               : STD_LOGIC_VECTOR(7 downto 0);
+    signal LiDi_C               : STD_LOGIC_VECTOR(7 downto 0);
+    signal LiDi_OP              : STD_LOGIC_VECTOR(7 downto 0);
+    signal LC_OP                : STD_LOGIC;
     signal RegistreBank_Out     : STD_LOGIC_VECTOR(7 downto 0);
+    signal None_signal          : STD_LOGIC_VECTOR(7 downto 0) := (others => 'X');
 
 begin  
    
@@ -65,18 +75,31 @@ begin
                         RST     => RST, 
                         D_out   => IP_memInstru);
     
-    U2 : memInstru  Port map (  CLK             => CLK,
-                                IP_memInstru    => addr, 
-                                Output          => memInstru_LiDi);
+    U2 : memInstru  Port map (  CLK     => CLK,
+                                addr    => IP_memInstru  , 
+                                Output  => memInstru_LiDi);
                        
-    U3 : Flip_Flop_D Port map ( A_in    =>
-                                B_in    =>
-                                C_in    =>
-                                OP_in   => 
+    U3 : Flip_Flop_D Port map ( A_in    => memInstru_LiDi(31 downto 23),    -- [Ri] ← [Rj] + [Rk]   page 03
+                                B_in    => memInstru_LiDi(15 downto 7),
+                                C_in    => memInstru_LiDi(7 downto 0),
+                                OP_in   => memInstru_LiDi(23 downto 15),
                                 CLK     => CLK,
-                                A_out   =>
-                                B_out   =>
-                                C_out   =>
-                                OP_out  =>      );
+                                A_out   => LiDi_A,
+                                B_out   => LiDi_B,
+                                C_out   => LiDi_C,
+                                OP_out  => LiDi_OP);
+    
+    U4: LC_OP_RE Port map(  OP  => LiDi_OP,
+                            W   => LC_OP);    
+                                                    
+    U5: RegistreBank Port map ( ADDR_A  => (others => 'X'),
+                                ADDR_B  => (others => 'X'),
+                                ADDR_W  => LiDi_A,
+                                W       => LC_OP,                  -- ATENTION !
+                                DATA    => LiDi_B,
+                                RST     => RST,
+                                CLK     => CLK,
+                                QA      => None_signal,
+                                QB      => None_signal);
 
 end Behavioral;
