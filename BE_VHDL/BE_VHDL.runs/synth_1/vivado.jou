@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Oct 24 11:15:46 2024
+# Process ID: 28372
+# Current directory: /home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.runs/synth_1
+# Command line: vivado -log memDonnees.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memDonnees.tcl
+# Log file: /home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.runs/synth_1/memDonnees.vds
+# Journal file: /home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.runs/synth_1/vivado.jou
+# Running On: insa-20923, OS: Linux, CPU Frequency: 2695.016 MHz, CPU Physical cores: 6, Host memory: 16443 MB
+#-----------------------------------------------------------
+source memDonnees.tcl -notrace
