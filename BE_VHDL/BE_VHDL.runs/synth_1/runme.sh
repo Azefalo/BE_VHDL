@@ -7,10 +7,14 @@
 # Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
+exit
+
 if [ -z "$PATH" ]; then
-  PATH=/usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/usr/local/insa/Xilinx/Vivado/2023.1/bin
+  PATH=D:/Softwares/Vivado/2023.1/ids_lite/ISE/bin/nt64;D:/Softwares/Vivado/2023.1/ids_lite/ISE/lib/nt64:D:/Softwares/Vivado/2023.1/bin
 else
-  PATH=/usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/usr/local/insa/Xilinx/Vivado/2023.1/bin:$PATH
+  PATH=D:/Softwares/Vivado/2023.1/ids_lite/ISE/bin/nt64;D:/Softwares/Vivado/2023.1/ids_lite/ISE/lib/nt64:D:/Softwares/Vivado/2023.1/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.runs/synth_1'
+HD_PWD='D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log memDonnees.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memDonnees.tcl
+EAStep vivado -log Illustration1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Illustration1.tcl

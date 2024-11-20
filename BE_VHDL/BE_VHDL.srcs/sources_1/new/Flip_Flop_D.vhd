@@ -15,12 +15,12 @@ entity Flip_Flop_D is
     Port ( A_in     : in  STD_LOGIC_VECTOR (7 downto 0);
            B_in     : in  STD_LOGIC_VECTOR (7 downto 0);
            C_in     : in  STD_LOGIC_VECTOR (7 downto 0);
-           OP_in    : in  STD_LOGIC_VECTOR (3 downto 0);
+           OP_in    : in  STD_LOGIC_VECTOR (7 downto 0);
            CLK      : in  STD_LOGIC;
            A_out    : out STD_LOGIC_VECTOR (7 downto 0);
            B_out    : out STD_LOGIC_VECTOR (7 downto 0);
            C_out    : out STD_LOGIC_VECTOR (7 downto 0);
-           OP_out   : out STD_LOGIC_VECTOR (3 downto 0));
+           OP_out   : out STD_LOGIC_VECTOR (7 downto 0));
            
 end Flip_Flop_D;
 

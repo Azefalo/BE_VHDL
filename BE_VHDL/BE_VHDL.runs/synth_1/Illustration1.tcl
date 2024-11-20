@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.runs/synth_1/memDonnees.tcl"
+  variable script "D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.runs/synth_1/Illustration1.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,15 +76,22 @@ create_project -in_memory -part xc7k70tfbv676-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {/home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.cache/wt} [current_project]
-set_property parent.project_path {/home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.xpr} [current_project]
+set_property webtalk.parent_dir D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.cache/wt [current_project]
+set_property parent.project_path D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo {/home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.cache/ip} [current_project]
+set_property ip_output_repo d:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib {{/home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd}}
+read_vhdl -library xil_defaultlib {
+  D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd
+  D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/IP.vhd
+  D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/LC_OP_RE.vhd
+  D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/RegistreBank.vhd
+  D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd
+  D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Illustration1.vhd
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -94,16 +101,16 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{/home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc}}
-set_property used_in_implementation false [get_files {{/home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc}}]
+read_xdc D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc
+set_property used_in_implementation false [get_files D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental {/home/buttow-albuq/INSA Toulouse/VHDL/BE_VHDL/BE_VHDL.srcs/utils_1/imports/synth_1/ALU.dcp}
+read_checkpoint -auto_incremental -incremental D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/utils_1/imports/synth_1/ALU.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top memDonnees -part xc7k70tfbv676-1
+synth_design -top Illustration1 -part xc7k70tfbv676-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -113,10 +120,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef memDonnees.dcp
+write_checkpoint -force -noxdef Illustration1.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file memDonnees_utilization_synth.rpt -pb memDonnees_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file Illustration1_utilization_synth.rpt -pb Illustration1_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

@@ -5,9 +5,9 @@
 --------------------------------------------------------------------------------------------
 
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+use IEEE.STD_LOGIC_ARITH.all;
 
 entity RegistreBank is
     Port (
@@ -34,15 +34,15 @@ begin
         if RST = '0' then
            registers <= (others => (others => '0')); -- Reset à 0x00 pour tous les registres
         elsif W = '1' then
-            registers(to_integer(unsigned(ADDR_W))) <= DATA; -- Écriture des données
+            registers(conv_integer(unsigned(ADDR_W))) <= DATA; -- Écriture des données
         end if;
     end process;
 
     -- Lecture simultanée
     QA <= DATA when (ADDR_A = ADDR_W and W = '1') else
-        registers(to_integer(unsigned(ADDR_A))); 
+        registers(conv_integer(unsigned(ADDR_A))); 
     QB <= DATA when (ADDR_B = ADDR_W and W = '1') else
-        registers(to_integer(unsigned(ADDR_B)));
+        registers(conv_integer(unsigned(ADDR_B)));
 
 
 
