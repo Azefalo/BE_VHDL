@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Illustration1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Illustration1.tcl
+EAStep vivado -log Ilustration6.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Ilustration6.tcl

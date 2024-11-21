@@ -50,11 +50,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity IP is
     Port ( CLK      : in    STD_LOGIC;
            RST      : in    STD_LOGIC;
-           D_out    : out   STD_LOGIC_VECTOR (7 downto 0));
+           D_out    : out   STD_LOGIC_VECTOR (3 downto 0));
 end IP;
 
 architecture Behavioral of IP is
-signal temporary_output : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');  -- Temporary Output and sets it to 0
+signal temporary_output : STD_LOGIC_VECTOR(3 downto 0) := (others => '0');  -- Temporary Output and sets it to 0
 	begin
         process
         begin
