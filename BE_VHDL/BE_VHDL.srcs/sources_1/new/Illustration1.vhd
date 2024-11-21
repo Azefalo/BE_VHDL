@@ -104,7 +104,7 @@ begin
                                 DATA    => LiDi_B,
                                 RST     => RST,
                                 CLK     => CLK,
-                                QA      => None_signal,
+                                QA      => Output,
                                 QB      => None_signal);
 
 end Behavioral;
