@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Nov 21 10:46:07 2024
-# Process ID: 4020
+# Start of session at: Mon Dec  9 04:50:34 2024
+# Process ID: 21392
 # Current directory: D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.runs/synth_1
 # Command line: vivado.exe -log Ilustration6.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Ilustration6.tcl
 # Log file: D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.runs/synth_1/Ilustration6.vds
@@ -12,7 +12,7 @@
 # Running On: DESKTOP-KMFD8FM, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 8464 MB
 #-----------------------------------------------------------
 source Ilustration6.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 448.070 ; gain = 157.094
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 449.336 ; gain = 160.750
 Command: read_checkpoint -auto_incremental -incremental D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/utils_1/imports/synth_1/ALU.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/utils_1/imports/synth_1/ALU.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -20,39 +20,43 @@ Command: synth_design -top Ilustration6 -part xc7k70tfbv676-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
-INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4908
+INFO: [Synth 8-7075] Helper process launched with PID 6816
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1265.746 ; gain = 409.730
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 891.418 ; gain = 408.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Ilustration6' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:18]
-INFO: [Synth 8-3491] module 'IP' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/IP.vhd:50' bound to instance 'U1' of component 'IP' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:149]
-INFO: [Synth 8-638] synthesizing module 'IP' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/IP.vhd:56]
-INFO: [Synth 8-256] done synthesizing module 'IP' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/IP.vhd:56]
+INFO: [Synth 8-3491] module 'IP' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/IP.vhd:12' bound to instance 'U1' of component 'IP' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'IP' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/IP.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'IP' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/IP.vhd:18]
 INFO: [Synth 8-3491] module 'memInstru' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:13' bound to instance 'U2' of component 'memInstru' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:153]
 INFO: [Synth 8-638] synthesizing module 'memInstru' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'memInstru' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:19]
+WARNING: [Synth 8-5640] Port 'rst' is missing in component declaration [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:31]
 INFO: [Synth 8-3491] module 'Flip_Flop_D' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:13' bound to instance 'U3' of component 'Flip_Flop_D' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:157]
-INFO: [Synth 8-638] synthesizing module 'Flip_Flop_D' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:27]
-INFO: [Synth 8-256] done synthesizing module 'Flip_Flop_D' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'Flip_Flop_D' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'Flip_Flop_D' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:29]
 INFO: [Synth 8-3491] module 'RegistreBank' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/RegistreBank.vhd:12' bound to instance 'U4' of component 'RegistreBank' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'RegistreBank' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/RegistreBank.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'RegistreBank' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/RegistreBank.vhd:26]
+INFO: [Synth 8-638] synthesizing module 'RegistreBank' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/RegistreBank.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'RegistreBank' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/RegistreBank.vhd:25]
 INFO: [Synth 8-3491] module 'MUX_BR' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_BR.vhd:13' bound to instance 'U5' of component 'MUX_BR' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:177]
 INFO: [Synth 8-638] synthesizing module 'MUX_BR' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_BR.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'MUX_BR' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_BR.vhd:20]
+WARNING: [Synth 8-5640] Port 'rst' is missing in component declaration [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:31]
 INFO: [Synth 8-3491] module 'Flip_Flop_D' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:13' bound to instance 'U6' of component 'Flip_Flop_D' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:182]
 INFO: [Synth 8-3491] module 'LC_OP_UAL' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/LC_OP_UAL.vhd:12' bound to instance 'U7' of component 'LC_OP_UAL' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:192]
 INFO: [Synth 8-638] synthesizing module 'LC_OP_UAL' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/LC_OP_UAL.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'LC_OP_UAL' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/LC_OP_UAL.vhd:17]
-INFO: [Synth 8-3491] module 'UAL' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/UAL.vhd:12' bound to instance 'U8' of component 'UAL' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:195]
+INFO: [Synth 8-3491] module 'UAL' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/UAL.vhd:14' bound to instance 'U8' of component 'UAL' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:195]
 INFO: [Synth 8-638] synthesizing module 'UAL' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/UAL.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'UAL' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/UAL.vhd:23]
 INFO: [Synth 8-3491] module 'MUX_UAL' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_UAL.vhd:13' bound to instance 'U9' of component 'MUX_UAL' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:200]
 INFO: [Synth 8-638] synthesizing module 'MUX_UAL' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_UAL.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'MUX_UAL' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_UAL.vhd:20]
+WARNING: [Synth 8-5640] Port 'rst' is missing in component declaration [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:31]
 INFO: [Synth 8-3491] module 'Flip_Flop_D' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:13' bound to instance 'U10' of component 'Flip_Flop_D' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:205]
 INFO: [Synth 8-3491] module 'MUX_MD1' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_MD1.vhd:13' bound to instance 'U11' of component 'MUX_MD1' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:215]
 INFO: [Synth 8-638] synthesizing module 'MUX_MD1' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_MD1.vhd:20]
@@ -61,120 +65,220 @@ INFO: [Synth 8-3491] module 'LC_OP_MD' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_
 INFO: [Synth 8-638] synthesizing module 'LC_OP_MD' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/LC_OP_MD.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'LC_OP_MD' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/LC_OP_MD.vhd:17]
 INFO: [Synth 8-3491] module 'memDonnees' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:12' bound to instance 'U13' of component 'memDonnees' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:223]
-INFO: [Synth 8-638] synthesizing module 'memDonnees' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'memDonnees' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'memDonnees' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'memDonnees' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:22]
 INFO: [Synth 8-3491] module 'MUX_MD2' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_MD2.vhd:13' bound to instance 'U14' of component 'MUX_MD2' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:230]
 INFO: [Synth 8-638] synthesizing module 'MUX_MD2' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_MD2.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'MUX_MD2' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/MUX_MD2.vhd:20]
+WARNING: [Synth 8-5640] Port 'rst' is missing in component declaration [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:31]
 INFO: [Synth 8-3491] module 'Flip_Flop_D' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:13' bound to instance 'U15' of component 'Flip_Flop_D' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:235]
 INFO: [Synth 8-3491] module 'LC_OP_RE' declared at 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/LC_OP_RE.vhd:12' bound to instance 'U16' of component 'LC_OP_RE' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:245]
 INFO: [Synth 8-638] synthesizing module 'LC_OP_RE' [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/LC_OP_RE.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'LC_OP_RE' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/LC_OP_RE.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'Ilustration6' (0#1) [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:18]
+WARNING: [Synth 8-3848] Net registers[5] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[11] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[13] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[15] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[16] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[17] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[18] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[19] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[20] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[21] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[22] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[23] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[24] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[25] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[26] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[27] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[28] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[29] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[30] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[31] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[32] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[33] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[34] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[35] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[36] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[37] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[38] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[39] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[40] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[41] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[42] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[43] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[44] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[45] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[46] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[47] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[48] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[49] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[50] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[51] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[52] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[53] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[54] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[55] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[56] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[57] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[58] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[59] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[60] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[61] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[62] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[63] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[64] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[65] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[66] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[67] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[68] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[69] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[70] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[71] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[72] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[73] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[74] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[75] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[76] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[77] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[78] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[79] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[80] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[81] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[82] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[83] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[84] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[85] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[86] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[87] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[88] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[89] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[90] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[91] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[92] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[93] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[94] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[95] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[96] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[97] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[98] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[99] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[100] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[101] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[102] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[103] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[104] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[105] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[106] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[107] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[108] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[109] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[110] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+WARNING: [Synth 8-3848] Net registers[111] in module/entity memInstru does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memInstru.vhd:21]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_reg' and it is trimmed from '16' to '8' bits. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/UAL.vhd:45]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[255] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[254] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[253] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[252] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[251] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[250] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[249] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[248] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[247] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[246] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[245] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[244] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[243] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[242] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[241] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[240] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[239] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[238] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[237] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[236] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[235] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[234] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[233] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[232] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[231] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[230] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[229] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[228] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[227] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[226] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[225] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[224] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[223] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[222] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[221] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[220] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[219] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[218] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[217] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[216] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[215] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[214] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[213] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[212] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[211] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[210] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[209] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[208] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[207] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[206] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[205] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[204] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[203] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[202] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[201] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[200] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[199] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[198] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[197] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[196] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[195] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[194] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[193] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[192] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[191] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[190] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[189] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[188] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[187] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[186] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[185] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[184] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[183] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[182] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[181] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[180] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[179] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[178] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[177] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[176] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[175] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[174] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[173] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[172] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[171] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[170] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[169] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[168] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[167] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[166] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[165] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[164] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[163] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[162] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[161] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[160] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[159] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[158] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[157] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element registers_reg[156] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:31]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[16] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[17] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[18] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[19] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[20] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[21] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[22] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[23] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[24] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[25] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[26] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[27] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[28] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[29] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[30] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[31] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[32] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[33] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[34] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[35] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[36] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[37] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[38] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[39] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[40] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[41] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[42] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[43] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[44] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[45] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[46] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[47] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[48] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[49] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[50] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[51] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[52] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[53] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[54] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[55] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[56] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[57] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[58] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[59] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[60] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[61] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[62] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[63] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[64] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[65] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[66] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[67] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[68] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[69] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[70] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[71] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[72] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[73] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[74] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[75] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[76] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[77] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[78] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[79] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[80] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[81] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[82] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[83] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[84] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[85] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[86] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[87] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[88] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[89] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[90] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[91] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[92] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[93] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[94] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[95] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[96] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[97] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[98] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[99] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[100] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[101] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[102] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[103] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[104] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[105] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[106] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[107] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[108] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[109] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[110] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[111] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[112] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[113] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[114] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element registers_reg[115] was removed.  [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/memDonnees.vhd:32]
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-3848] Net Output in module/entity Ilustration6 does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:15]
-WARNING: [Synth 8-3848] Net B_Mem_RE_DATA in module/entity Ilustration6 does not have driver. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Ilustration6.vhd:123]
 WARNING: [Synth 8-7129] Port OP[7] in module LC_OP_UAL is either unconnected or has no load
 WARNING: [Synth 8-7129] Port OP[6] in module LC_OP_UAL is either unconnected or has no load
 WARNING: [Synth 8-7129] Port OP[5] in module LC_OP_UAL is either unconnected or has no load
@@ -189,181 +293,39 @@ WARNING: [Synth 8-7129] Port Output[2] in module Ilustration6 is either unconnec
 WARNING: [Synth 8-7129] Port Output[1] in module Ilustration6 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Output[0] in module Ilustration6 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1363.738 ; gain = 507.723
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 992.332 ; gain = 509.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1363.738 ; gain = 507.723
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1363.738 ; gain = 507.723
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1363.738 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc]
-WARNING: [Vivado 12-584] No ports matched 'A[0]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:4]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:4]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'A[1]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:5]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:5]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'A[2]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:6]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:6]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'A[3]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:7]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:7]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'A[4]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:8]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:8]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'A[5]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:9]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:9]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'A[6]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:10]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'A[7]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'B[0]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'B[1]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'B[2]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'B[3]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'B[4]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'B[5]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'B[6]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'B[7]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Ctrl_Alu[0]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Ctrl_Alu[1]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Ctrl_Alu[2]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'res[0]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'res[1]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'res[2]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'res[3]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'res[4]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'res[5]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'res[6]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'res[7]'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'C'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'O'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'N'. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc]
-Parsing XDC File [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA_BE.xdc]
-Finished Parsing XDC File [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA_BE.xdc]
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1406.641 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.240 . Memory (MB): peak = 1406.641 ; gain = 0.000
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 992.332 ; gain = 509.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1406.641 ; gain = 550.625
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 992.332 ; gain = 509.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 992.332 ; gain = 509.793
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1406.641 ; gain = 550.625
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Preparing Guide Design
----------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6895] The reference checkpoint D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/utils_1/imports/synth_1/ALU.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1406.641 ; gain = 550.625
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1406.641 ; gain = 550.625
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1406.641 ; gain = 550.625
----------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : 
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    8 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
 	   3 Input    8 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      8 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
-	                8 Bit    Registers := 49    
-	                4 Bit    Registers := 1     
+	                8 Bit    Registers := 50    
 +---Muxes : 
-	  17 Input   32 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 7     
 	   4 Input    8 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 32    
+	   2 Input    1 Bit        Muxes := 33    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -376,15 +338,11 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3936] Found unconnected internal register 'U10/B_out_reg' and it is trimmed from '8' to '4' bits. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:34]
-WARNING: [Synth 8-3936] Found unconnected internal register 'U3/C_out_reg' and it is trimmed from '8' to '4' bits. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:35]
-WARNING: [Synth 8-3936] Found unconnected internal register 'U10/A_out_reg' and it is trimmed from '8' to '4' bits. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:33]
-WARNING: [Synth 8-3936] Found unconnected internal register 'U6/A_out_reg' and it is trimmed from '8' to '4' bits. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:33]
-WARNING: [Synth 8-3936] Found unconnected internal register 'U3/A_out_reg' and it is trimmed from '8' to '4' bits. [D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd:33]
 WARNING: [Synth 8-7129] Port Output[7] in module Ilustration6 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Output[6] in module Ilustration6 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Output[5] in module Ilustration6 is either unconnected or has no load
@@ -394,25 +352,20 @@ WARNING: [Synth 8-7129] Port Output[2] in module Ilustration6 is either unconnec
 WARNING: [Synth 8-7129] Port Output[1] in module Ilustration6 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Output[0] in module Ilustration6 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.641 ; gain = 550.625
----------------------------------------------------------------------------------
+No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -430,37 +383,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -478,26 +431,32 @@ Report Cell Usage:
 +------+------+------+
 |1     |OBUFT |     8|
 +------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     8|
++------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1173.758 ; gain = 691.219
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 14 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1406.641 ; gain = 507.723
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1406.641 ; gain = 550.625
+Synthesis finished with 0 errors, 0 critical warnings and 513 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1173.758 ; gain = 691.219
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1173.758 ; gain = 691.219
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1406.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1182.250 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1406.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1276.246 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: 3e388f7e
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 160 Warnings, 31 Critical Warnings and 0 Errors encountered.
+60 Infos, 227 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1406.641 ; gain = 933.723
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1276.246 ; gain = 803.051
 INFO: [Common 17-1381] The checkpoint 'D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.runs/synth_1/Ilustration6.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Ilustration6_utilization_synth.rpt -pb Ilustration6_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 21 10:46:55 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 04:51:22 2024...

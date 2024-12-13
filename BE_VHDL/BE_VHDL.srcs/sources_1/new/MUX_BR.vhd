@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------------
---
---
---
+--  
+--  BE VHDL 
+--  INSA TOULOUSE
 --------------------------------------------------------------------------------------------
 
 library IEEE;
@@ -18,10 +18,10 @@ entity MUX_BR is
 end MUX_BR;
 
 architecture Behavioral of MUX_BR is
-
 begin
-    
     OUTPUT <=   INPUT1 when OP = x"06" else
+                INPUT1 when OP = x"07" else
+                (others => '0') when OP = x"00" else
                 INPUT2;
     
 end Behavioral;

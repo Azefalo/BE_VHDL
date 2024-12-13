@@ -1,0 +1,20 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../BE_VHDL.srcs/sources_1/new/Flip_Flop_D.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/IP.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/Ilustration6.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/LC_OP_MD.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/LC_OP_RE.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/LC_OP_UAL.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/MUX_BR.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/MUX_MD1.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/MUX_MD2.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/MUX_UAL.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/RegistreBank.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/UAL.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/memDonnees.vhd" \
+"../../../../BE_VHDL.srcs/sources_1/new/memInstru.vhd" \
+"../../../../BE_VHDL.srcs/sim_1/new/Ilustration6_test.vhd" \
+
+# Do not sort compile order
+nosort

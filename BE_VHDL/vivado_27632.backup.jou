@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sat Dec  7 12:56:00 2024
+# Process ID: 27632
+# Current directory: D:/INSA_Toulouse/BE_VHDL/BE_VHDL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23304 D:\INSA_Toulouse\BE_VHDL\BE_VHDL\BE_VHDL.xpr
+# Log file: D:/INSA_Toulouse/BE_VHDL/BE_VHDL/vivado.log
+# Journal file: D:/INSA_Toulouse/BE_VHDL/BE_VHDL\vivado.jou
+# Running On: DESKTOP-KMFD8FM, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 8464 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source Ilustration6_test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_sim
+launch_simulation
+source Ilustration6_test.tcl
+restart
+run all
+close_sim

@@ -19,25 +19,26 @@ architecture Behavioral of Ilustration6 is
     component IP is
         Port(   CLK     : in    STD_LOGIC;
                 RST     : in    STD_LOGIC;
-                D_out   : out   STD_LOGIC_VECTOR (3 downto 0));
+                D_out   : out   STD_LOGIC_VECTOR (7 downto 0));
     end component;
     
     component memInstru is
-        Port (  addr    : in STD_LOGIC_VECTOR (3 downto 0);
+        Port (  addr    : in STD_LOGIC_VECTOR (7 downto 0);
                 CLK     : in STD_LOGIC;
                 Output  : out STD_LOGIC_VECTOR (31 downto 0));
     end component;
     
     component Flip_Flop_D is
-        Port (  A_in    : in  STD_LOGIC_VECTOR (7 downto 0);
-                B_in    : in  STD_LOGIC_VECTOR (7 downto 0);
-                C_in    : in  STD_LOGIC_VECTOR (7 downto 0);
-                OP_in   : in  STD_LOGIC_VECTOR (7 downto 0);
-                CLK     : in  STD_LOGIC;
-                A_out   : out STD_LOGIC_VECTOR (7 downto 0);
-                B_out   : out STD_LOGIC_VECTOR (7 downto 0);
-                C_out   : out STD_LOGIC_VECTOR (7 downto 0);
-                OP_out  : out STD_LOGIC_VECTOR (7 downto 0));
+        Port ( A_in     : in  STD_LOGIC_VECTOR (7 downto 0);
+               B_in     : in  STD_LOGIC_VECTOR (7 downto 0);
+               C_in     : in  STD_LOGIC_VECTOR (7 downto 0);
+               OP_in    : in  STD_LOGIC_VECTOR (7 downto 0);
+               A_out    : out STD_LOGIC_VECTOR (7 downto 0);
+               B_out    : out STD_LOGIC_VECTOR (7 downto 0);
+               C_out    : out STD_LOGIC_VECTOR (7 downto 0);
+               OP_out   : out STD_LOGIC_VECTOR (7 downto 0);
+               RST      : in  STD_LOGIC;
+               CLK      : in  STD_LOGIC);
     end component;
     
     component UAL is
@@ -91,15 +92,15 @@ architecture Behavioral of Ilustration6 is
     end component;
     
     component RegistreBank is
-        Port (  ADDR_A  : in  STD_LOGIC_VECTOR(3 downto 0);
-                ADDR_B  : in  STD_LOGIC_VECTOR(3 downto 0);
-                ADDR_W  : in  STD_LOGIC_VECTOR(3 downto 0);
-                W       : in  STD_LOGIC;    
-                DATA    : in  STD_LOGIC_VECTOR(7 downto 0);
-                RST     : in  STD_LOGIC;    
-                CLK     : in  STD_LOGIC;   
-                QA      : out STD_LOGIC_VECTOR(7 downto 0);
-                QB      : out STD_LOGIC_VECTOR(7 downto 0));   
+        Port (  ADDR_A : in  STD_LOGIC_VECTOR(3 downto 0);
+                ADDR_B : in  STD_LOGIC_VECTOR(3 downto 0);
+                ADDR_W : in  STD_LOGIC_VECTOR(3 downto 0);
+                W      : in  STD_LOGIC;
+                DATA   : in  STD_LOGIC_VECTOR(7 downto 0);
+                RST    : in  STD_LOGIC;
+                CLK    : in  STD_LOGIC;
+                QA     : out STD_LOGIC_VECTOR(7 downto 0);
+                QB     : out STD_LOGIC_VECTOR(7 downto 0));   
     end component;
     
     component memDonnees is
@@ -111,7 +112,7 @@ architecture Behavioral of Ilustration6 is
                Output   : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
     
-    signal IP_memInstru             : STD_LOGIC_VECTOR(3 downto 0);
+    signal IP_memInstru             : STD_LOGIC_VECTOR(7 downto 0);
     signal memInstru_LiDi           : STD_LOGIC_VECTOR(31 downto 0);
     signal A_LiDi                   : STD_LOGIC_VECTOR(7 downto 0);
     signal B_LiDi                   : STD_LOGIC_VECTOR(7 downto 0);
@@ -159,6 +160,7 @@ begin
                                 B_in    => memInstru_LiDi(15 downto 8),
                                 C_in    => memInstru_LiDi(7 downto 0),
                                 CLK     => CLK,
+                                RST     => RST,
                                 A_out   => A_LiDi,
                                 B_out   => B_LiDi,
                                 C_out   => C_LiDi,
@@ -184,6 +186,7 @@ begin
                                 C_in    => B_RegistreBank_Out_DiEx,
                                 OP_in   => OP_LiDi,
                                 CLK     => CLK,
+                                RST     => RST,
                                 A_out   => A_DiEx,
                                 B_out   => B_DiEx,
                                 C_out   => C_DiEx,
@@ -207,6 +210,7 @@ begin
                                     C_in    => None_signal,
                                     OP_in   => OP_DiEx,
                                     CLK     => CLK,
+                                    RST     => RST,
                                     A_out   => A_ExMem,
                                     B_out   => B_ExMem,
                                     C_out   => C_ExMem,
@@ -237,6 +241,7 @@ begin
                                     C_in    => None_signal,
                                     OP_in   => OP_ExMem,
                                     CLK     => CLK,
+                                    RST     => RST,
                                     A_out   => A_MemRe,
                                     B_out   => B_MemRe,
                                     C_out   => C_MemRe,

@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------------
---
---
---
+--  
+--  BE VHDL 
+--  INSA TOULOUSE
 --------------------------------------------------------------------------------------------
 
 library IEEE;
@@ -21,9 +21,9 @@ architecture Behavioral of MUX_UAL is
 
 begin
     
-    OUTPUT <=   INPUT1 when OP = "000" else
-                INPUT1 when OP = "001" else
-                INPUT1 when OP = "010" else
-                INPUT2;
+    OUTPUT <=   INPUT2 when OP = "000" else
+                INPUT2 when OP = "001" else
+                INPUT2 when OP = "010" else
+                INPUT1;
     
 end Behavioral;

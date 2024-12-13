@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "DATA_Flow_test_behav" "xil_defaultlib.DATA_Flow_test" -log "elaborate.log" 

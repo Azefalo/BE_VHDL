@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Dec  9 05:51:56 2024
+# Process ID: 31180
+# Current directory: D:/INSA_Toulouse/BE_VHDL/BE_Conception_uP_RISC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25704 D:\INSA_Toulouse\BE_VHDL\BE_Conception_uP_RISC\BE_Conception_uP_RISC.xpr
+# Log file: D:/INSA_Toulouse/BE_VHDL/BE_Conception_uP_RISC/vivado.log
+# Journal file: D:/INSA_Toulouse/BE_VHDL/BE_Conception_uP_RISC\vivado.jou
+# Running On: DESKTOP-KMFD8FM, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 8464 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/INSA_Toulouse/BE_VHDL/BE_Conception_uP_RISC/BE_Conception_uP_RISC.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source DATA_Flow_test.tcl
+current_wave_config {Untitled 1}
+add_wave {{/DATA_Flow_test/CPU_test/BANC_REGISTRES/registers}} 
+restart
+run all
+close_sim
+launch_simulation
+source DATA_Flow_test.tcl
+current_wave_config {Untitled 2}
+add_wave {{/DATA_Flow_test/CPU_test/BANC_REGISTRES/registers}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/DATA_Flow_test/CPU_test/MEM_DONNEES/registers}} 
+restart
+run all
+save_wave_config {D:/INSA_Toulouse/BE_VHDL/BE_Conception_uP_RISC/DATA_Flow_test_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/INSA_Toulouse/BE_VHDL/BE_Conception_uP_RISC/DATA_Flow_test_behav.wcfg
+set_property xsim.view D:/INSA_Toulouse/BE_VHDL/BE_Conception_uP_RISC/DATA_Flow_test_behav.wcfg [get_filesets sim_1]
+close_sim

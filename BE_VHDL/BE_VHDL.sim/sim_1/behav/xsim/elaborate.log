@@ -1,8 +1,8 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /usr/local/insa/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot memInstru_test_behav xil_defaultlib.memInstru_test -log elaborate.log 
-Using 8 slave threads.
+Running: D:/Softwares/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Ilustration6_test_behav xil_defaultlib.Ilustration6_test -log elaborate.log 
+Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
@@ -11,9 +11,22 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.IP [ip_default]
 Compiling architecture behavioral of entity xil_defaultlib.memInstru [meminstru_default]
-Compiling architecture behavioral of entity xil_defaultlib.meminstru_test
-Built simulation snapshot memInstru_test_behav
+Compiling architecture behavioral of entity xil_defaultlib.Flip_Flop_D [flip_flop_d_default]
+Compiling architecture behavioral of entity xil_defaultlib.RegistreBank [registrebank_default]
+Compiling architecture behavioral of entity xil_defaultlib.MUX_BR [mux_br_default]
+Compiling architecture behavioral of entity xil_defaultlib.LC_OP_UAL [lc_op_ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.MUX_UAL [mux_ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.MUX_MD1 [mux_md1_default]
+Compiling architecture behavioral of entity xil_defaultlib.LC_OP_MD [lc_op_md_default]
+Compiling architecture behavioral of entity xil_defaultlib.memDonnees [memdonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.MUX_MD2 [mux_md2_default]
+Compiling architecture behavioral of entity xil_defaultlib.LC_OP_RE [lc_op_re_default]
+Compiling architecture behavioral of entity xil_defaultlib.Ilustration6 [ilustration6_default]
+Compiling architecture behavioral of entity xil_defaultlib.ilustration6_test
+Built simulation snapshot Ilustration6_test_behav

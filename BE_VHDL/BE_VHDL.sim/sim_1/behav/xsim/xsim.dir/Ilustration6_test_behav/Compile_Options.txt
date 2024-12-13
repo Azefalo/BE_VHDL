@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "Ilustration6_test_behav" "xil_defaultlib.Ilustration6_test" -log "elaborate.log" 

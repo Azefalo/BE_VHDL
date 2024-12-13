@@ -1,21 +1,21 @@
 --------------------------------------------------------------------------------------------
---
---
---
+--  
+--  BE VHDL 
+--  INSA TOULOUSE
 --------------------------------------------------------------------------------------------
 
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
-use IEEE.STD_LOGIC_UNSIGNED.all;
-use IEEE.STD_LOGIC_ARITH.all;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_arith.ALL;
+use IEEE.STD_LOGIC_unsigned.ALL;
+
+use IEEE.NUMERIC_STD.ALL;
 
 entity UAL is
     port(
-        -- Inputs
         A           : in  STD_LOGIC_VECTOR(7 downto 0);   -- Input A                 (8 bits) |7|6|5|4|3|2|1|0|
         B           : in  STD_LOGIC_VECTOR(7 downto 0);   -- Input B                 (8 bits) |7|6|5|4|3|2|1|0|
         Ctrl_Alu    : in  STD_LOGIC_VECTOR(2 downto 0);   -- Code for the operation  (3 bits) |2|1|0|
-        -- Outputs
         res         : out STD_LOGIC_VECTOR(7 downto 0)   -- Result of the operation (8 bits) |7|6|5|4|3|2|1|0|
     );
 end entity;

@@ -1,0 +1,70 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sat Dec  7 15:00:37 2024
+# Process ID: 26408
+# Current directory: D:/INSA_Toulouse/BE_VHDL/BE_VHDL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27616 D:\INSA_Toulouse\BE_VHDL\BE_VHDL\BE_VHDL.xpr
+# Log file: D:/INSA_Toulouse/BE_VHDL/BE_VHDL/vivado.log
+# Journal file: D:/INSA_Toulouse/BE_VHDL/BE_VHDL\vivado.jou
+# Running On: DESKTOP-KMFD8FM, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 8464 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_simulation
+source Ilustration6_test.tcl
+restart
+run all
+restart
+run all
+restart
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_sim
+launch_simulation
+source Ilustration6_test.tcl
+close_sim
+launch_simulation
+source Ilustration6_test.tcl
+current_wave_config {Untitled 3}
+add_wave {{/Ilustration6_test/CPU6/Output_UAL}} 
+current_wave_config {Untitled 3}
+add_wave {{/Ilustration6_test/CPU6/C_DiEx}} 
+current_wave_config {Untitled 3}
+add_wave {{/Ilustration6_test/CPU6/B_DiEx}} 
+restart
+run all
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Ilustration1_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Ilustration1 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+close_sim

@@ -110,12 +110,6 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc
-set_property used_in_implementation false [get_files D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA.xdc]
-
-read_xdc D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA_BE.xdc
-set_property used_in_implementation false [get_files D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/constrs_1/new/FPGA_BE.xdc]
-
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental D:/INSA_Toulouse/BE_VHDL/BE_VHDL/BE_VHDL.srcs/utils_1/imports/synth_1/ALU.dcp
