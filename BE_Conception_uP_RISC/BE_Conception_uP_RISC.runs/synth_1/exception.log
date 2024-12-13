@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file D:\INSA_Toulouse\BE_VHDL\BE_Conception_uP_RISC\BE_Conception_uP_RISC.runs\synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permissão negada

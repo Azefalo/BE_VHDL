@@ -104,7 +104,7 @@ architecture Behavioral of Ilustration6 is
     end component;
     
     component memDonnees is
-        Port ( addr     : in STD_LOGIC_VECTOR (3 downto 0);
+        Port ( addr     : in STD_LOGIC_VECTOR (7 downto 0);
                Data     : in STD_LOGIC_VECTOR (7 downto 0);
                RW       : in STD_LOGIC;
                RST      : in STD_LOGIC;
@@ -224,7 +224,7 @@ begin
     U12 : LC_OP_MD Port map (   OP  => OP_ExMem,
                                 RW  => signal_LC_OP_MD);
                                 
-    U13 : memDonnees Port map ( addr     => Output_MUX1_MD(3 downto 0),
+    U13 : memDonnees Port map ( addr     => Output_MUX1_MD(7 downto 0),
                                 Data     => B_ExMem,
                                 RW       => signal_LC_OP_MD,
                                 RST      => RST,
